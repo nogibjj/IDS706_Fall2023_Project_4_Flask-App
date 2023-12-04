@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenAI API Test</title>
+    <script>
+        function generateText() {
+            const prompt = document.getElementById('prompt').value;
+            fetch('https://api-inference.huggingface.co/models/gpt2', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer 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'
+                },
+                body: JSON.stringify({
+                    inputs: prompt
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').textContent = data[0].generated_text;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>OpenAI API Test</h1>
+    <input type="text" id="prompt" placeholder="Enter a prompt">
+    <button onclick="generateText()">Generate Text</button>
+    <p id="result"></p>
+</body>
+</html>
