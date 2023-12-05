@@ -4,6 +4,8 @@
 [![test](https://github.com/nogibjj/IDS706_Fall2023_Project_4_Flask_App/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Project_4_Flask_App/actions/workflows/test.yml)
 # IDS706 Fall 2023 Project 4 Auto Scaling Flask App Using Serverless Platform
 
+### Demo Video On Youtube: https://youtu.be/OuxOxbjW8O4
+
 Fall 2023 IDS_706 Data Engineering Systems Individual Project 4: Publicly accessible auto-scaling container using Azure App Services and Flask.
 
 It contains:
