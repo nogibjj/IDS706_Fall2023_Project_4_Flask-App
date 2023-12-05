@@ -1,22 +1,23 @@
 # Basic Website Template
-from flask import Flask, render_template, request
-import openai
-
-openai.api_key = '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'
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+
+@app.route("/")
 def home():
-    return render_template('home.html', title='Home')
+    return render_template("home.html", title="Home")
 
-@app.route('/about')
+
+@app.route("/about")
 def about():
-    return render_template('about.html', title='About Us')
+    return render_template("about.html", title="About Us")
 
-@app.route('/api/openai')
+
+@app.route("/api/openai")
 def prompt():
-    return render_template('prompt.html')
+    return render_template("prompt.html")
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=5000)
